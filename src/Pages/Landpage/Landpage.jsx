@@ -164,8 +164,8 @@ const Landpage = () => {
           paragraph={"This project is made for displaying captured live stream video by ESP32 Cam attached on Rover and  Satellite."} 
                    name={"Graduation Project"} 
                    subname={"Satellite Prototype using TailwindCss and R3F."} 
-                   thumbnail1={"/src/assets/Images/Project1.png"} 
-                   thumbnail2={"/src/assets/Images/Project2.png"} />
+                   thumbnail1={thumbnail1} 
+                   thumbnail2={thumbnail2} />
           </div>
 
         </div>

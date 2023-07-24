@@ -30,18 +30,18 @@ const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2,thumbnail3 }
       duration: 2,
       delay:2.7
     });
-    gsap.to('.img3', {
-      scrollTrigger: {
-        trigger: '.img3',
-        toggleActions: 'restart none reverse pause',
-        scrub:true,
-        start:"top left",
-        end:"top -100px"
-      },
-      y:100,
-      duration: 2,
-      delay:2.7
-    });
+    // gsap.to('.img3', {
+    //   scrollTrigger: {
+    //     trigger: '.img3',
+    //     toggleActions: 'restart none reverse pause',
+    //     scrub:true,
+    //     start:"top left",
+    //     end:"top -100px"
+    //   },
+    //   y:100,
+    //   duration: 2,
+    //   delay:2.7
+    // });
   }, []);
   return (
     <div>
