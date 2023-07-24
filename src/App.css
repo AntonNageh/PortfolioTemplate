@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Modulus';
+    src: url('/src/assets/Fonts/Modulus.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Mollie';
+    src: url('/src/assets/Fonts/Mollie.ttf') format('truetype'); 
+}
+.App {
+    font-family: 'Modulus', sans-serif;
+}
