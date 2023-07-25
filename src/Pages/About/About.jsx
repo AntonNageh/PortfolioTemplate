@@ -9,6 +9,7 @@ const About = () => {
    
     useEffect(() => { 
     gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
+    
     gsap.defaults({ease: "none"});
 
     const pulses = gsap.timeline({
