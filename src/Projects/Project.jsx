@@ -3,7 +3,7 @@ import "./Project.css"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
-const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2,thumbnail3 }) => {
+const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2 }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to('.img', {

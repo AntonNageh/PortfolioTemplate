@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger , MotionPathPlugin } from 'gsap/all';
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+// import * as DrawSVGPlugin from '/DrawSVGPlugin.min.js';
 import React, { useEffect } from 'react'
 import './About.css'
 
@@ -24,7 +25,7 @@ const About = () => {
     .to(".ball05, .text04", {}, 0.6);
 
     const main = gsap.timeline({defaults: {duration: 1},
-    scrollTrigger: {
+      scrollTrigger: {
         trigger: "#svg",
         scrub: true,
         start: "top center",
