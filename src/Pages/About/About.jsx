@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger , MotionPathPlugin } from 'gsap/all';
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
-// import * as DrawSVGPlugin from '/DrawSVGPlugin.min.js';
+// import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+import * as DrawSVGPlugin from '/DrawSVGPlugin.min.js';
 import React, { useEffect } from 'react'
 import './About.css'
 
