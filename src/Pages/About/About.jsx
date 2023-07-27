@@ -9,6 +9,11 @@ import './About.css'
 const About = () => {
    
     useEffect(() => { 
+      var video = document.getElementById("ManVideo")
+      document.body.addEventListener('mouseover', () => {
+        video.muted = false;
+      });
+
     gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
     
     gsap.defaults({ease: "none"});

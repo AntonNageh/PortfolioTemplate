@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Landpage.css';
 import videoSource from '../../assets/Images/Entrance1.mp4';
+import ManVideo from '../../assets/Images/Man.mp4';
 import Project from '../../Projects/Project';
 import thumbnail1 from '/src/assets/Images/Project1.png'
 import thumbnail2 from '/src/assets/Images/Project2.png'
@@ -10,6 +11,7 @@ import thumbnail2 from '/src/assets/Images/Project2.png'
  * The Landpage component renders the landing page of the website.
  */
 const Landpage = () => {
+
   const page1Ref = useRef(null);
   const page2Ref = useRef(null);
   const page3Ref = useRef(null);
@@ -17,7 +19,15 @@ const Landpage = () => {
   const text2Ref = useRef(null);
   const videoRef = useRef(null);
 
+
   useEffect(() => {
+    var video = document.getElementById("ManVideo");
+    video.addEventListener('play', function() {
+      video.muted = false;
+    });
+    setTimeout(()=> {
+      video.pause();
+    }, 9800)
     /*
      * Handles the scroll event and performs certain actions based on the scroll position.
      */
@@ -28,7 +38,7 @@ const Landpage = () => {
         page3Ref.current.classList.add('offscreen-left');
         page2Ref.current.classList.remove('hidden');
         page2Ref.current.classList.add('onscreen-page2');
-
+        video.play();
         setTimeout(() => {
           videoRef.current.classList.add('offscreen-left-video');
         }, 1500);
@@ -102,11 +112,13 @@ const Landpage = () => {
         ref={page1Ref}
       >
         <div className="Container">
-          <video id="myVideo"
+            
+            <video id="myVideo"
             className="Video"
-            src={videoSource}
+            src={videoSource}        
             muted
             ref={videoRef} />
+             
           <div
             data-aos="fade-up"
             className="absolute md:mt-6"
@@ -188,6 +200,17 @@ const Landpage = () => {
           </h1>
         </div>
       </div>
+      <div>
+
+   
+    <video  id="ManVideo"
+            className="ManVideo "
+            src={ManVideo}
+            muted
+            autoPlay
+            
+    />
+    </div>
     </>
 
   );

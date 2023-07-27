@@ -96,6 +96,17 @@ section {
     left: 50%;
     transform: translate(-50%, -15%) scale(1.25);
   }
+  .ManVideo{
+    transform: none;
+    left: 3%;
+    position: fixed;
+    top: 65%;
+    object-fit: cover;
+    width: 10rem;
+    height: 15rem;
+    border-radius: 500px;
+
+  }
   .offscreen-left {
     transform: translateX(-100%,0%) !important;
     transition: transform 2s ease-in-out;
