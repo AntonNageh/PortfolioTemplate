@@ -37,7 +37,7 @@ const Landpage = () => {
      /*
      * Handles the scroll event and performs certain actions based on the scroll position.
      */
-    const handleScroll = (event) => {
+    const handleScroll = () => {
       const { scrollY } = window;
         
       if (scrollY > 22) {
@@ -120,6 +120,35 @@ const Landpage = () => {
     AOS.init();
   }, []);
 
+  const disableScroll = () => {
+    const duration = 9800; // duration in milliseconds
+    const startTime = new Date().getTime();
+    const endTime = startTime + duration;
+    
+    const disableBodyScroll = () => {
+      document.body.style.overflow = 'hidden';
+    }
+    
+    const enableBodyScroll = () => {
+      document.body.style.overflow = null;
+    }
+    
+    const checkTimeElapsed = () => {
+      const currentTime = new Date().getTime();
+      if (currentTime <= endTime) {
+        disableBodyScroll();
+        setTimeout(checkTimeElapsed, 100);
+      } else {
+        enableBodyScroll();
+      }
+    }
+    
+    checkTimeElapsed();
+  }
+  
+  useEffect(() => {
+    disableScroll();
+  }, []);
   return (
     <>
       <div
@@ -150,7 +179,7 @@ const Landpage = () => {
           <div
             data-aos="fade-up"
             id="Text2"
-            className="absolute mt-[55vh] ml-[55%] md:ml-[60%] md:mt-[25%]"
+            className="absolute mt-[55vh] ml-[55%] md:ml-[60%] md:mt-[35%]"
             data-aos-duration="1500"
             ref={text2Ref}
           >
