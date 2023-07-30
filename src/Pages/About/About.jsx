@@ -53,7 +53,7 @@ const About = () => {
     .add(pulses, 0);
 },[])
   return (
-    <div className='md:mx-auto text-white  flex flex-row md:ml-10'>
+    <div className='md:mx-auto text-white  flex flex-row md:ml-10 md:mr-10 h-screen'>
     <div className='md:-mt-60'> 
     <svg  id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
     <path className="line01 line" d="M 10 200  600 200" ></path>
@@ -82,26 +82,26 @@ const About = () => {
     <circle className="ball ball05" r="20" cx="365" cy="1100"></circle>
 
     </svg>
-    <div className='text-4xl'>And Journey continues with you!</div>
+    <div className='text-4xl md:pb-12'>And Journey continues with you!</div>
     </div>
             
     <div className='text-white md:mx-auto '>
     <div 
-    className='absolute text-4xl md:mt-[19.5rem] md:-ml-[10rem]'
+    className='absolute text-4xl md:mt-[22rem] md:-ml-[10rem]'
     data-aos="fade-left"
     data-aos-duration="2000">
     And Journey continues with you!</div>
-    <div className='absolute text-4xl md:mt-[36rem] md:-ml-[10rem]'
+    <div className='absolute text-4xl md:mt-[40rem] md:-ml-[10rem]'
     data-aos="zoom-in-left"
     data-aos-duration="2000">
     And Journey continues with you!</div>
     <div 
-    className='absolute text-4xl md:mt-[52rem] md:-ml-[10rem]'
+    className='absolute text-4xl md:mt-[57rem] md:-ml-[10rem]'
     data-aos="fade-left"
     data-aos-duration="2000">
     And Journey continues with you!</div>
     <div 
-    className='absolute text-4xl md:mt-[68rem] md:-ml-[10rem]'
+    className='absolute text-4xl md:mt-[73rem] md:-ml-[10rem]'
     data-aos="zoom-in-left"
     data-aos-duration="2000">
     And Journey continues with you!</div>
