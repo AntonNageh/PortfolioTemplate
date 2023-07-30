@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="mt-10 pb-10 md:-mt-10 mb:pb-0 flex flex-wrap md:justify-center md:flex-nowrap w-full text-sm">
-      <nav className="relative max-w-7xl w-full border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-transparent dark:border-gray-100" aria-label="Global">
+      <nav className="z-[4] relative max-w-7xl w-full border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-transparent dark:border-gray-100" aria-label="Global">
         <div className="flex items-center justify-between">
           <a className="flex-none text-xl font-semibold dark:text-white md:mt-16" href='/' aria-label="Brand">Anttonov</a>
           <div className="md:hidden">

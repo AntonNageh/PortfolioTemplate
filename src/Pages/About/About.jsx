@@ -3,12 +3,13 @@ import { ScrollTrigger , MotionPathPlugin } from 'gsap/all';
 // import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
  import * as DrawSVGPlugin from '/DrawSVGPlugin.min.js';
 
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import './About.css'
 
 const About = () => {
    
     useEffect(() => { 
+    AOS.init();
 
     gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
     
@@ -52,17 +53,17 @@ const About = () => {
     .add(pulses, 0);
 },[])
   return (
-    <div className='md:mx-auto text-white md:-mt-60 '>
-
+    <div className='md:mx-auto text-white  flex flex-row md:ml-10'>
+    <div className='md:-mt-60'> 
     <svg  id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
     <path className="line01 line" d="M 10 200  600 200" ></path>
-    <path className="line02 line" d="M 10 400  600 400" ></path>
-    <path className="line03 line" d="M 10 600  600 600" ></path>
-    <path className="line04 line" d="M 10 800  600 800" ></path>
+    <path className="line02 line" d="M 10 500  600 500" ></path>
+    <path className="line03 line" d="M 10 800  600 800" ></path>
+    <path className="line04 line" d="M 10 1100  600 1100" ></path>
     <text className="text text01" x="30" y="190">2021</text>
-    <text className="text text02" x="30" y="390">2022</text>
-    <text className="text text03" x="30" y="590">2023</text>
-    <text className="text text04" x="30" y="790">2024</text>
+    <text className="text text02" x="30" y="490">2022</text>
+    <text className="text text03" x="30" y="790">2023</text>
+    <text className="text text04" x="30" y="1090">2024</text>
 
     <path className="theLine" 
             d="M -5,0
@@ -76,11 +77,36 @@ const About = () => {
     
     <circle className="ball ball01" r="20" cx="50"  cy="100"></circle>
     <circle className="ball ball02" r="20" cx="278" cy="201"></circle>
-    <circle className="ball ball03" r="20" cx="327" cy="401"></circle>
-    <circle className="ball ball04" r="20" cx="203" cy="601"></circle>
-    <circle className="ball ball05" r="20" cx="125" cy="800"></circle>
+    <circle className="ball ball03" r="20" cx="270" cy="501"></circle>
+    <circle className="ball ball04" r="20" cx="127" cy="801"></circle>
+    <circle className="ball ball05" r="20" cx="365" cy="1100"></circle>
 
     </svg>
+    <div className='text-4xl'>And Journey continues with you!</div>
+    </div>
+            
+    <div className='text-white md:mx-auto '>
+    <div 
+    className='absolute text-4xl md:mt-[19.5rem] md:-ml-[10rem]'
+    data-aos="fade-left"
+    data-aos-duration="2000">
+    And Journey continues with you!</div>
+    <div className='absolute text-4xl md:mt-[36rem] md:-ml-[10rem]'
+    data-aos="zoom-in-left"
+    data-aos-duration="2000">
+    And Journey continues with you!</div>
+    <div 
+    className='absolute text-4xl md:mt-[52rem] md:-ml-[10rem]'
+    data-aos="fade-left"
+    data-aos-duration="2000">
+    And Journey continues with you!</div>
+    <div 
+    className='absolute text-4xl md:mt-[68rem] md:-ml-[10rem]'
+    data-aos="zoom-in-left"
+    data-aos-duration="2000">
+    And Journey continues with you!</div>
+    </div>
+
     </div>
   )
 }
