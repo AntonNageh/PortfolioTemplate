@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Landpage.css';
@@ -18,49 +18,73 @@ const Landpage = () => {
   const text1Ref = useRef(null);
   const text2Ref = useRef(null);
   const videoRef = useRef(null);
-
+  const Video2Ref= useRef(null);
+  
+  
+  const [HasVideoPlayed, setHasVideoPlayed] = useState(true);
 
   useEffect(() => {
-    var video = document.getElementById("ManVideo");
-    video.addEventListener('play', function() {
-      video.muted = false;
-    });
-    setTimeout(()=> {
-      video.pause();
-    }, 9800)
-    /*
+
+      var manVideo = document.getElementById("ManVideo");   
+      manVideo.muted = false;
+       
+      
+      setTimeout(()=> {
+        manVideo.pause();
+      }, 9800);     
+      
+
+     /*
      * Handles the scroll event and performs certain actions based on the scroll position.
      */
-    const handleScroll = () => {
+    const handleScroll = (event) => {
       const { scrollY } = window;
+        
       if (scrollY > 22) {
         page1Ref.current.classList.add('offscreen-left');
         page3Ref.current.classList.add('offscreen-left');
         page2Ref.current.classList.remove('hidden');
         page2Ref.current.classList.add('onscreen-page2');
-        video.play();
+  
+        HasVideoPlayed ? 
+        (
+        Video2Ref.current.play(), 
+        setHasVideoPlayed(false)
+        ) :  (
+        setTimeout(() => {
+          Video2Ref.current.classList.add("animate__animated");
+          Video2Ref.current.classList.add("animate__fadeOut");
+        }, 10000)
+        );
+
         setTimeout(() => {
           videoRef.current.classList.add('offscreen-left-video');
         }, 1500);
-        setTimeout(() => {
+
+
           setTimeout(() => {
             page2Ref.current.classList.add('onscreen');
           }, 500)
-        });
+
         setTimeout(() => {
           page3Ref.current.classList.add('hidden');
         }, 1500);
+       
       }
     };
 
+
     window.addEventListener('scroll', handleScroll);
 
+ 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+    
+  }, [HasVideoPlayed]);
 
   useEffect(() => {
+
     const timer = setTimeout(() => {
       videoRef.current.play();
       text1Ref.current.remove();
@@ -68,14 +92,12 @@ const Landpage = () => {
     }, 2500);
 
     return () => clearTimeout(timer);
+    
   }, []);
 
   useEffect(() => {
-    let timer;
 
-    const handleScroll = () => {
-      clearTimeout(timer);
-    };
+    let timer;
     /*
      * StartTimer function only happens to execute if the user doesn't scroll
      * But once the user scrolls, it never happens to executed. (Problem appeared with early srolling.)
@@ -90,12 +112,6 @@ const Landpage = () => {
 
     startTimer();
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(timer);
-    };
   }, []);
 
 
@@ -208,7 +224,7 @@ const Landpage = () => {
             src={ManVideo}
             muted
             autoPlay
-            
+            ref={Video2Ref}
     />
     </div>
     </>

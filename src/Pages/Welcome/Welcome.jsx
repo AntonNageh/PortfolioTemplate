@@ -4,10 +4,10 @@ import './Welcome.css';
 function Welcome () {
     useEffect(()=>{
         let Now = document.getElementById("NowText");
-        document.addEventListener("scroll",()=>{
-
-            if(window.scrollY>22)
-        setTimeout(() => {
+        
+        document.addEventListener("scroll", () => {
+        if(window.scrollY>22)
+            setTimeout(() => {
             Now.classList.remove("hidden");
             Now.classList.add("animate__animated");
             Now.classList.add("animate__fadeIn");
