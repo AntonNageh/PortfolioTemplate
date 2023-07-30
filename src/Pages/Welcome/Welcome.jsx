@@ -23,7 +23,7 @@ function Welcome () {
             <a href="/landing" className="Presshere text-2xl">Press here</a>
             <div className="w-full">
             <spline-viewer url="https://prod.spline.design/FVZWbQH2B6ndj9UU/scene.splinecode" events-target="global"></spline-viewer>
-            <h1 className="text-6xl font-bold Scrollup ">Scroll back! up!</h1>
+            <h1 className="text-6xl font-bold Scrollup">Scroll back! up!</h1>
             <h1 id="NowText" className="text-6xl hidden font-extrabold Scrollup md:mt-[5rem]">now :)  </h1> 
             </div>
             

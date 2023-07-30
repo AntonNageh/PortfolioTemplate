@@ -25,8 +25,8 @@ const Header = () => {
         </div>
         <div id="navbar-collapse-with-animation" className={`hs-collapse  overflow-hidden transition-all duration-300 basis-full grow md:flex md:ml-[55vw] ${isActive? 'hidden' : ''}`}>
           <div className="p-3 md:p-0 Navbar_body items-center flex flex-col gap-y-4 gap-x-0  mr-[35vw] -mt-3 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-10 md:mr-10 md:mt-0 md:pt-14 md:pl-7">
+            <a href='/landing' className="cursor-pointer w-fit font-medium md:py-6 dark:text-white dark:hover:text-gray-500">Repeat again</a>
             <a href='/about' className="cursor-pointer w-fit font-medium md:py-6 dark:text-white dark:hover:text-gray-500" aria-current="page">About</a>
-            <a href='/#page-2' className="cursor-pointer w-fit font-medium md:py-6 dark:text-white dark:hover:text-gray-500">Works</a>
             <a href='/contact' className="cursor-pointer w-fit font-medium md:py-6 dark:text-white dark:hover:text-gray-500">Contact</a>
           </div>
         </div>

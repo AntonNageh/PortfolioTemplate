@@ -108,7 +108,7 @@ section {
 
   }
   .offscreen-left {
-    transform: translateX(-100%,0%) !important;
+    transform: translateX(-150%,0%) !important;
     transition: transform 2s ease-in-out;
   }
   .onscreen {

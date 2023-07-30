@@ -36,7 +36,7 @@ const Contact = () => {
       <div id="bg-1-1"></div>
       <div id="bg-1-2"></div>
       <div id="bg-1-3"></div>
-      <div id="bg-1-4"></div>
+      {/* <div id="bg-1-4"></div> */}
       <div id="bg-1-5"></div>
     </div>
     <div className='absolute w-full text-center justify-center md:flex'>
