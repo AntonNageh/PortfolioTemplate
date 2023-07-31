@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import 'animate.css';
 import './Welcome.css';
+import Footer from "../../Main Components/Footer/Footer";
 function Welcome () {
     useEffect(()=>{
 
@@ -30,6 +31,7 @@ function Welcome () {
             <h1 id="NowText" className="text-6xl hidden font-extrabold Scrollup md:mt-[5rem]">now :)  </h1> 
             </div>
             
+            <Footer/>
        </div>
     );
 };

@@ -32,6 +32,7 @@ const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2 }) => {
     });
   }, []);
   return (
+    <>
     <div>
       <div className='md:mx-auto flex flex-col md:flex-row md:-mt-32 md:-ml-12'>
         <div className='md:p-5 py-5'>
@@ -65,6 +66,7 @@ const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2 }) => {
         </div>
       </div>
     </div>
+  </>
   );
 };
 
