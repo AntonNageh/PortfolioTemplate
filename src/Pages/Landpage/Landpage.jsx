@@ -239,7 +239,7 @@ const Landpage = () => {
             <span className="text-6xl md:text-8xl">Envelope</span>
           </h1>
         </div>
-        <div className="absolute mt-[60vh] ml-[55%] md:ml-[58%] md:mt-[25%]">
+        <div className="absolute mt-[60vh] ml-[55%] md:ml-[58%] md:mt-[35%]">
           <h1 className="backdrop-filter backdrop-blur-sm">
             <span className="text-5xl text-white">Scroll down for Projects.</span>
           </h1>
@@ -256,7 +256,6 @@ const Landpage = () => {
             ref={Video2Ref}
     />
     </div>
-    
     </>
 
   );
