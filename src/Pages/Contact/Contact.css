@@ -135,3 +135,6 @@
     left: -200px;
   }
   
+  .hoverBlue:hover {
+    color: blue !important;
+  }

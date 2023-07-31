@@ -82,7 +82,7 @@ const About = () => {
     <circle className="ball ball05" r="20" cx="365" cy="1100"></circle>
 
     </svg>
-    <div className='text-4xl md:pb-12'>And Journey continues with you!</div>
+    <div className='text-4xl md:pb-12 md:pt-10'>And Journey continues with you!</div>
     </div>
             
     <div className='text-white md:mx-auto '>
@@ -90,21 +90,22 @@ const About = () => {
     className='absolute text-4xl md:mt-[22rem] md:-ml-[10rem]'
     data-aos="fade-left"
     data-aos-duration="2000">
-    And Journey continues with you!</div>
-    <div className='absolute text-4xl md:mt-[40rem] md:-ml-[10rem]'
+    Joined Pixels Egypt - Helwan University (Where I knew about Web development).</div>
+    <div className='absolute text-[1.5rem] md:mt-[40rem] md:-ml-[10rem]'
     data-aos="zoom-in-left"
     data-aos-duration="2000">
-    And Journey continues with you!</div>
+    Joined IEEE Cairo University (Where I worked with a team of UI/UX designers and Back-end developers, also I've finished a part of IEEE-Cusb main website and participated in a national competition on the Middle east.</div>
     <div 
     className='absolute text-4xl md:mt-[57rem] md:-ml-[10rem]'
     data-aos="fade-left"
     data-aos-duration="2000">
-    And Journey continues with you!</div>
+    Graduated from IAET as an Electronics and Communictions engineer.</div>
     <div 
     className='absolute text-4xl md:mt-[73rem] md:-ml-[10rem]'
     data-aos="zoom-in-left"
     data-aos-duration="2000">
-    And Journey continues with you!</div>
+    Joined CodeSoft Front-end Internship. 
+    </div>
     </div>
 
     </div>

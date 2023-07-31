@@ -40,12 +40,31 @@ const Contact = () => {
       <div id="bg-1-5"></div>
     </div>
     <div className='absolute w-full text-center justify-center md:flex'>
-    <div className='mt-[50vh] absolute z-30'>Facebook: </div>
-    <div className='mt-[150vh] absolute z-30'>LinkedIn: </div>
-    <div className='mt-[250vh] absolute z-30'>Github: </div>
-    <div className='mt-[350vh] absolute z-30'>Gmail: </div>
-    <div className='mt-[450vh] absolute z-30'>Phone Number: </div>
-    <div className='mt-[273rem] absolute z-30'>Thank you </div>
+    <div className='mt-[50vh] absolute z-30'>
+      Facebook: <br/><br/>
+      <a className='text-white hoverBlue' href='https://www.facebook.com/anton.nageh/'>Anton Nageh</a>
+    </div>
+    <div className='mt-[150vh] absolute z-30'>
+      LinkedIn: <br/><br/>
+    <a className='text-white hoverBlue' href='https://linkedin.com/in/anton-nageh-772852169'>Anton Nageh</a>
+    </div>
+
+
+    <div className='mt-[250vh] absolute z-30'>
+      Github: <br/><br/>
+    <a className='text-white hoverBlue' href='https://github.com/AntonNageh'>Anton Nageh</a>
+    </div>
+    <div className='mt-[350vh] absolute z-30'>
+      Gmail: <br/><br/>
+      <a className='text-white hoverBlue' href='mailto:anton.nageh20@gmail.com'>Anton Nageh</a>
+    </div>
+    <div className='mt-[450vh] absolute z-30'>
+      Phone Number: <br/><br/>
+      <a className='text-white hoverBlue' href='tel:+201223967806'>+201223967806</a>
+    </div>
+    <div className='mt-[273rem] absolute z-30'>
+      Thank you
+    </div>
     </div>
     <div id="ground"></div>
     </div>  

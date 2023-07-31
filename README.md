@@ -4,6 +4,7 @@
 
 # Installation 
 - Just type npm install after cloning the project so that all packages can be downladed and installed successfully.
+- npm run dev to be able to see the full project.
 # Please Note
 - The project is not finished yet, I'm aiming to add some parallex effects and R3F for 3D objects.
 - This Readme file is not even finished yet, I uploaded the code so I can deploy it on a Server.

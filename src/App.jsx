@@ -6,20 +6,16 @@ import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Welcome from './Pages/Welcome/Welcome';
 import Landpage from './Pages/Landpage/Landpage';
+import BacktoTop from './Main Components/BacktoTop/BacktoTop';
 
 
 function App() {
-  const scrollToSection = (sectionId) => {
-    const target = document.querySelector(`#${sectionId}`);
-    target.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
 
   return (
     
     <div className="App">
-      <Header scrollToSection= {scrollToSection}/>
+      <Header />
+      <BacktoTop/>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Welcome/>}/>
