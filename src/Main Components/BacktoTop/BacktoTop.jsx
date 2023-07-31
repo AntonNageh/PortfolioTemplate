@@ -14,7 +14,6 @@ const BacktoTop = () => {
           window.scrollTo(0, currentPosition - currentPosition / 8);
         } else {
             setCurrentPosition(0);
-
           }
     }
         
@@ -27,8 +26,11 @@ const BacktoTop = () => {
         (
         <div className="rounded-full bg-white w-14 h-14 right-0 bottom-0 md:mr-8 md:mb-8 z-50 fixed animate__animated animate__fadeIn">         
             <button onClick={()=>ScrollTop()}>
-            <img src={ScrollTopImg} alt='unloaded arrow' className='hover:scale-125'>
-            </img>
+                <img 
+                src={ScrollTopImg} 
+                alt='unloaded arrow' 
+                className='hover:scale-125'>
+                </img>
             </button>
         </div>
         )
