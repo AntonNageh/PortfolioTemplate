@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { gsap } from 'gsap';
 import { ScrollTrigger , MotionPathPlugin } from 'gsap/all';
@@ -7,9 +7,17 @@ import * as DrawSVGPlugin from '/DrawSVGPlugin.min.js';
 
 import './About.css'
 
+import DownloadCV from '../../assets/Images/CV.pdf'
+
 const About = () => {
-   
+
+  var downloadbtn = document.getElementById('download-btn');
+  if (downloadbtn !== null)
+  downloadbtn.onclick = () => {
+    downloadbtn.setAttribute('download', 'CV.pdf');
+    }
     useEffect(() => { 
+ 
     AOS.init();
 
     gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
@@ -53,9 +61,13 @@ const About = () => {
     }, "-=0.5") // Adjust the timing based on your preference
     .add(pulses, 0);
 },[])
+
+if(window.innerWidth > 768)
+{
   return (
+    <div className='flex flex-col'>
     <div className='md:mx-auto text-white  flex flex-row md:ml-10 md:mr-10 h-screen'>
-      <div className='md:-mt-60'> 
+      <div className='-mt-60'> 
         <svg  id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
           <path className="line01 line" d="M 10 200  600 200" ></path>
           <path className="line02 line" d="M 10 500  600 500" ></path>
@@ -113,10 +125,52 @@ const About = () => {
           data-aos-duration="2000">
           Joined CodeSoft Front-end Internship. 
           </div>
-
+          <div>
         </div>
     </div>
+    </div>
+    <div className='text-white mt-[40rem] text-center text-4xl mb-10'>
+    <h1 className='font-bold'>you can download my CV here :</h1><br/>
+    <a href={DownloadCV} id='download-btn' sandbox="allow-downloads" download>
+    <button download>Download CV</button>
+    </a>
+    </div>
+</div>
   )
+}
+else {
+  return (
+    <div className='m-5 text-center text-white text-[2rem] flex flex-col justify-center items-center'>
+    <div className=''>Please use desktop to be able to see the full About section.</div>
+    <div className='mt-5 mb-5'>
+    <h1>2021 :<br/>
+    <span className='text-2xl'>Joined Pixels Egypt - Helwan University (Where I knew about Web development).</span> 
+      </h1>
+    </div>
+    <div className='mt-5 mb-5'>
+    <h1>2022 :<br/>
+    <span className='text-2xl'>Joined IEEE Cairo University (Where I worked with a team of UI/UX designers and Back-end developers, also I've finished a part of IEEE-Cusb main website and participated in a national competition on the Middle east.</span> 
+      </h1>
+    </div>
+    <div className='mt-5 mb-5'>
+    <h1>2023 :<br/>
+    <span className='text-2xl'>Graduated from IAET as an Electronics and Communictions engineer.</span> 
+      </h1>
+    </div>
+    <div className='mt-5 mb-5'>
+    <h1>2024 :<br/>
+    <span className='text-2xl'>Joined CodeSoft Front-end Internship</span> 
+      </h1>
+    </div>
+    <div>
+    <h1 className='font-bold'>You can download my CV here :</h1><br/>
+    <a href={DownloadCV} id='download-btn' sandbox="allow-downloads" download>
+    <button download>Download CV</button>
+    </a>
+    </div>
+    </div>
+    )
+}
 }
 
 export default About

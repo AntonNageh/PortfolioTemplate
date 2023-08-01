@@ -13,19 +13,25 @@ section {
 }
 .offscreen-left {
   transform:translate(-50rem,0%) !important;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 .offscreen-left-video {
   transform: translateX(-100rem) !important;
-  transition: transform 0.5s ease-in-out ;
+  transition: transform 1.5s ease-in-out ;
 }
 .onscreen {
   transform: translate(-25rem) !important;
   top: 25%;
   transition: transform 1.5s ease-in-out;
 }
+.initial-page2 {
+    transform: translateY(-10rem) !important;
+}
 .onscreen-page2{
-  transform: translateX(50rem) !important;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-55vw) !important;
+  transition: all 1.5s ease-in-out;
 }
 
 .Container {
@@ -37,11 +43,10 @@ section {
 
   video {
     position: absolute;
-    top: -6%;
     left: 50%; 
     height: 100%;
     width: 100%;
-    transform: translate(-50%, -6%) scale(2.5);
+    transform: translate(-50%, -6%) scale(3);
     transition: transform 1.5s ease-in;
   }
   @keyframes fadeUpAnimation {
@@ -85,10 +90,16 @@ section {
   ::-webkit-scrollbar-thumb:active {
     background-color: none;
   }
-
-
-
-
+  .ManVideo{
+    transform: none;
+    left: 3%;
+    position: fixed;
+    top: 77%;
+    object-fit: cover;
+    width: 7.5rem;
+    height: 10rem;
+    border-radius: 500px;
+  }
 
 @media all and (width>=768px) {
   video {
@@ -107,6 +118,12 @@ section {
     border-radius: 500px;
 
   }
+  .onscreen-page2{
+    display: block;
+    transform: translateX(55vw) !important;
+    transition: transform 1.5s ease-in-out;
+  }
+  
   .offscreen-left {
     transform: translateX(-150%,0%) !important;
     transition: transform 2s ease-in-out;

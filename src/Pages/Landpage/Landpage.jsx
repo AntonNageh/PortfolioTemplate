@@ -7,6 +7,8 @@ import ManVideo from '../../assets/Images/Man.mp4';
 import Project from '../../Projects/Project';
 import thumbnail1 from '/src/assets/Images/Project1.png'
 import thumbnail2 from '/src/assets/Images/Project2.png'
+import BookThumb1 from '/src/assets/Images/BookThumb1.png'
+import BookThumb2 from '/src/assets/Images/BookThumb2.png'
 /*
  * The Landpage component renders the landing page of the website.
  */
@@ -45,7 +47,7 @@ const Landpage = () => {
         page3Ref.current.classList.add('offscreen-left');
         page2Ref.current.classList.remove('hidden');
         page2Ref.current.classList.add('onscreen-page2');
-  
+        page2Ref.current.classList.remove('initial-page2');
         HasVideoPlayed ? 
         (
         Video2Ref.current.play(), 
@@ -179,7 +181,7 @@ const Landpage = () => {
           <div
             data-aos="fade-up"
             id="Text2"
-            className="absolute mt-[55vh] ml-[55%] md:ml-[60%] md:mt-[35%]"
+            className="absolute mt-[50vh] ml-[50%] md:ml-[60%] md:mt-[35%]"            
             data-aos-duration="1500"
             ref={text2Ref}
           >
@@ -193,18 +195,19 @@ const Landpage = () => {
 
       <div
         id="page-2"
-        className="text-white page-2 top-0 right-0 absolute hidden h-screen"
+        className="text-white initial-page2 top-0 right-0 animate__animated animate__fadeIn absolute hidden h-screen"
         ref={page2Ref}
       >
         <h1 className='text-6xl text-white md:-ml-[11rem] absolute ml-[3rem] md:-mt-10 font-bold'>Projects:</h1>
         <div className="md:mt-[10rem] md:-ml-[40rem] absolute mt-[5rem] ml-[2rem]">
-          <div className='md:mb-20'>
+          <div className='md:mb-20 mb-10'>
           <Project 
           paragraph={"This project is made for displaying captured live stream video by ESP32 Cam attached on Rover and  Satellite."} 
                    name={"Graduation Project"} 
                    subname={"Satellite Prototype using TailwindCss and R3F."} 
                    thumbnail1={thumbnail1} 
                    thumbnail2={thumbnail2}
+                   src="https://iaetsatellite.vercel.app"
                     />
           </div>
           <div className='md:mb-20'>
@@ -212,18 +215,19 @@ const Landpage = () => {
           paragraph={"This project was my first built website on Vite and I learned how to deal with Books API by using Udacity API link."} 
                    name={"Books Store"} 
                    subname={"Udacity NanoDegree Project."} 
-                   thumbnail1={thumbnail1} 
-                   thumbnail2={thumbnail2} 
+                   thumbnail1={BookThumb1} 
+                   thumbnail2={BookThumb2}
+                   src="https://anton-mybookstore.vercel.app" 
                     />
           </div>
-          <div className='md:mb-20'>
+          {/* <div className='md:mb-20'>
           <Project 
           paragraph={"This project is made for displaying captured live stream video by ESP32 Cam attached on Rover and  Satellite."} 
                    name={"Graduation Project"} 
                    subname={"Satellite Prototype using TailwindCss and R3F."} 
                    thumbnail1={thumbnail1} 
                    thumbnail2={thumbnail2} />
-          </div>
+          </div> */}
 
         </div>
         
@@ -234,14 +238,14 @@ const Landpage = () => {
         ref={page3Ref}
       >
         <div className="absolute text-white" >
-          <h1 className="md:ml-[5vw] md:mt-10 md:text-5xl backdrop-filter backdrop-blur-sm ">
+          <h1 className="md:ml-[5vw] md:mt-10 md:text-5xl mt-8 text-3xl ml-5  backdrop-filter backdrop-blur-sm ">
             Push the <br />
-            <span className="text-6xl md:text-8xl">Envelope</span>
+            <span className="text-5xl md:text-8xl">Envelope</span>
           </h1>
         </div>
-        <div className="absolute mt-[60vh] ml-[55%] md:ml-[58%] md:mt-[35%]">
+        <div className="absolute mt-[55vh] ml-[55%] md:ml-[58%] md:mt-[35%]">
           <h1 className="backdrop-filter backdrop-blur-sm">
-            <span className="text-5xl text-white">Scroll down for Projects.</span>
+            <span className="md:text-5xl text-3xl text-white">Scroll down for Projects.</span>
           </h1>
         </div>
       </div>
@@ -249,7 +253,7 @@ const Landpage = () => {
 
    
     <video  id="ManVideo"
-            className="ManVideo "
+            className="ManVideo scale-75 md:scale-0"
             src={ManVideo}
             muted
             autoPlay

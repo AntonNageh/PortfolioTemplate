@@ -3,7 +3,7 @@ const ContactInfo = () => {
 
     return (
         <>
-            <div className='absolute w-full text-center justify-center md:flex'>
+            <div className='absolute w-full text-center justify-center flex'>
                 <div className='mt-[50vh] absolute z-30'>
                 Facebook: <br/><br/>
                 <a className='text-white hoverBlue' href='https://www.facebook.com/anton.nageh/'>Anton Nageh</a>
@@ -29,7 +29,7 @@ const ContactInfo = () => {
                 <a className='text-white hoverBlue' href='tel:+201223967806'>+201223967806</a>
                 </div>
 
-                <div className='mt-[273rem] absolute z-30'>
+                <div className='mt-[250rem] md:mt-[273rem] absolute z-30'>
                 Thank you
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './BacktoTop.css'
 import ScrollTopImg from '../../assets/Images/ScrollTop.png'
 
 const BacktoTop = () => {
@@ -24,7 +24,7 @@ const BacktoTop = () => {
     return (
         currentPosition>0 &&
         (
-        <div className="rounded-full bg-white w-14 h-14 right-0 bottom-0 md:mr-8 md:mb-8 z-50 fixed animate__animated animate__fadeIn">         
+        <div className="rounded-full Arrow bg-white w-14 h-14 right-0 bottom-0 md:mr-8 md:mb-8 z-50 fixed animate__animated animate__fadeIn">         
             <button onClick={()=>ScrollTop()}>
                 <img 
                 src={ScrollTopImg} 

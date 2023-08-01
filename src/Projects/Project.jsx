@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
-import "./Project.css"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
-const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2 }) => {
+const Project = ({ name, subname, paragraph,src, thumbnail1, thumbnail2 }) => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.img', {
+    if(window.innerWidth < 768)
+    {delete window.gsap}
+    else
+    {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('.img', {
       scrollTrigger: {
         trigger: '.img',
         toggleActions: 'restart none reverse pause',
@@ -30,6 +33,7 @@ const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2 }) => {
       duration: 2,
       delay:2.7
     });
+  }
   }, []);
   return (
     <>
@@ -51,6 +55,7 @@ const Project = ({ name, subname, paragraph, thumbnail1, thumbnail2 }) => {
           <h1 className='text-6xl pb-5'>{name}</h1>
           <h1 className='text-3xl pb-5'>{subname}</h1>
           <p className='text-xl pb-5 text-center'>{paragraph}</p>
+          <a href={src} className='text-3xl hoverBlue'>Press here</a>
         </div>
         <div className='md:p-5 py-10'>
           <img
